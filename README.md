@@ -1,46 +1,102 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+日本語ページ
+# 顧客管理アプリ
 
-## Available Scripts
+このリポジトリは、Reactを使用して構築した顧客管理アプリです。ログインページから案件ボードに遷移し、顧客リストを管理できます。
+さらに、カードビューを使って案件のステータスを視覚的に管理する機能も実装しています。
 
-In the project directory, you can run:
+## セットアップ手順
+以下の手順でプロジェクトをセットアップし、ローカル環境で実行できます。
+1. **リポジトリをクローンする**:
+    ```bash
+    git clone https://github.com/yourusername/customer-list-app.git
+    ```
 
-### `npm start`
+2. **プロジェクトディレクトリに移動**:
+    ```bash
+    cd customer-list-app
+    ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3. **依存関係をインストール**:
+    ```bash
+    npm install
+    ```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+4. **アプリケーションを起動**:
+    ```bash
+    npm start
+    ```
 
-### `npm test`
+    上記コマンドで、ローカルサーバーが起動し、ブラウザでアプリケーションが表示されます。通常、`http://localhost:3000` でアクセスできます。
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 使用した技術・ライブラリ
 
-### `npm run build`
+- **React**: ユーザーインターフェースの作成
+- **React Router DOM**: ページ遷移のためのライブラリ
+- **Material UI**: UIコンポーネントのためのライブラリ
+- **TypeScript**: 型安全なコードの実装
+- **@mui/icons-material**: アイコンライブラリ
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 実装した機能の説明
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **ログインページ**: ユーザーがログインできる画面です。IDは「Admin」、パスワードは「password」でログインできます。
+- **サイドバー**: アプリケーションのナビゲーションを提供するサイドバーがあり、案件ボードや顧客一覧に移動できる。
+　　- **案件ボード**: 顧客の案件状態（リード、アプローチ、商談、検討中）を視覚的に管理できるボードです。案件のホット度（高/低）を表示する機能も搭載しています。
+　　- **顧客リスト**: 顧客の情報をテーブル形式で表示します。情報には会社名、担当者名、契約金額、登録日などが含まれます。
+　　- **顧客登録**: 新しい顧客情報を登録することができます。
+　　- **ログアウト機能**: 案件ボード（CaseList）ページにログイン後、サイドバーやヘッダーに表示される「ログアウト」ボタンをクリックすることで、ログアウトし、再度ログインページに戻ることができます。
+- **レスポンシブデザイン**: モバイルとPCで適切に表示されるレスポンシブデザインを採用しています。
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 動作確認方法
 
-### `npm run eject`
+1. ログイン画面で以下のIDとパスワードを使用してください:
+   - **ID**: Admin
+   - **パスワード**: password
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. ログイン後、以下の機能を確認できます:
+   - **案件ボード**: 各案件の状態が視覚的に管理されており、カードの色と状態が連動します。
+   - **顧客リスト**: 顧客の情報がリスト表示され、詳細情報を見ることができます。
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## その他
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- **問題が発生した場合**:
+    - GitHubでのIssueの作成をお願いします。
+    - [GitHub リポジトリのリンク](https://github.com/yourusername/customer-list-app)
+ 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+-------------------------------
+プロジェクトディレクトリ内で、次のコマンドを実行できます：
 
-## Learn More
+npm start
+開発モードでアプリを実行します。
+http://localhost:3000 を開いてブラウザで表示できます。
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+編集を加えるとページが再読み込みされます。
+また、コンソールにリントエラーが表示されます。
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+npm test
+インタラクティブなウォッチモードでテストランナーを起動します。
+テストの実行に関する詳細については、テストの実行のセクションを参照してください。
+
+npm run build
+アプリを本番用にbuildフォルダにビルドします。
+Reactを本番モードで正しくバンドルし、最適化されたパフォーマンスを提供するようにビルドします。
+
+ビルドは圧縮され、ファイル名にはハッシュが含まれます。
+アプリはデプロイの準備が整いました！
+
+デプロイに関する詳細は、こちらのセクションを参照してください。
+
+npm run eject
+注意：これは一方向の操作です。eject後は戻れません！
+
+ビルドツールや設定に満足できない場合は、いつでもejectできます。このコマンドは、プロジェクトから単一のビルド依存関係を削除します。
+
+その代わりに、すべての設定ファイルとその転送依存関係（webpack、Babel、ESLintなど）をプロジェクトにコピーしますので、完全にコントロールできるようになります。eject以外のコマンドはすべて動作し続けますが、コピーされたスクリプトを指し示すようになりますので、それらを調整できます。この時点で、あなたは完全に自己管理することになります。
+
+ejectを使用する必要はありません。キュレートされた機能セットは、小規模から中規模のデプロイメントに適しており、この機能を使用しなければならないと感じる必要はありません。しかし、このツールが役立つのは、必要になったときにカスタマイズできることが理解できる場合です。
+
+詳細について
+詳細は、Create React Appのドキュメントを参照してください。
+
+Reactについて学ぶには、Reactのドキュメントをチェックしてください。
